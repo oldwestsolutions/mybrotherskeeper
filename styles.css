@@ -1,0 +1,653 @@
+/* Variables */
+:root {
+    /* Russian flag colors */
+    --russian-red: #E4382D;
+    --russian-blue: #0C3992;
+    --russian-white: #FFFFFF;
+    
+    /* Additional colors */
+    --dark-text: #111111;
+    --light-text: #FFFFFF;
+    --gray-light: #f5f5f5;
+    --gray-medium: #e5e5e5;
+    --gray-dark: #767676;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--dark-text);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+/* Typography with Eastern European influence */
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 60px;
+    height: 3px;
+    background: var(--russian-red);
+}
+
+.featured-categories h2, .featured-products h2 {
+    text-align: center;
+}
+
+.featured-categories h2::after, .featured-products h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Header */
+header {
+    background-color: var(--russian-white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--russian-blue);
+    letter-spacing: 3px;
+    padding: 0.5rem;
+    display: inline-block;
+    position: relative;
+}
+
+.logo a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid var(--russian-red);
+    border-bottom: 2px solid var(--russian-blue);
+    transform: skewX(-15deg);
+    z-index: -1;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--russian-red);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.search, .cart {
+    cursor: pointer;
+    color: var(--dark-text);
+    transition: color 0.3s ease;
+}
+
+.search:hover, .cart:hover {
+    color: var(--russian-red);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-text);
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--russian-white),
+        var(--russian-white) 10px,
+        var(--russian-blue) 10px,
+        var(--russian-blue) 20px,
+        var(--russian-red) 20px,
+        var(--russian-red) 30px
+    );
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.primary-btn {
+    background-color: var(--russian-red);
+    color: var(--light-text);
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.primary-btn:hover {
+    background-color: #c72f25;
+}
+
+/* Featured Categories */
+.featured-categories {
+    padding: 5rem 2rem;
+    background-color: var(--russian-white);
+}
+
+.category-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.05);
+}
+
+.category-card h3 {
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    color: var(--light-text);
+    font-size: 1.8rem;
+    z-index: 1;
+}
+
+.category-link {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--light-text);
+    font-weight: 500;
+    text-decoration: underline;
+    z-index: 1;
+}
+
+.category-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+/* Featured Products */
+.featured-products {
+    padding: 5rem 2rem;
+    background-color: var(--gray-light);
+}
+
+.product-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: var(--russian-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    color: var(--dark-text);
+}
+
+.product-info p {
+    color: var(--gray-dark);
+    margin-top: 0.5rem;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--russian-blue) !important;
+    margin-top: 0.5rem;
+}
+
+/* Brand Story */
+.brand-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.story-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.story-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.story-content p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.secondary-btn {
+    align-self: flex-start;
+    background-color: transparent;
+    color: var(--russian-blue);
+    border: 2px solid var(--russian-blue);
+    padding: 0.8rem 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background-color: var(--russian-blue);
+    color: var(--light-text);
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--russian-blue);
+    color: var(--light-text);
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+}
+
+.footer-column h4 {
+    margin-bottom: 1.5rem;
+    color: var(--russian-white);
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column ul li a {
+    color: var(--gray-medium);
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--russian-white);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--russian-red);
+}
+
+.newsletter p {
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-form input {
+    padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    flex-grow: 1;
+    color: var(--light-text);
+}
+
+.newsletter-form input::placeholder {
+    color: var(--gray-medium);
+}
+
+.newsletter-form button {
+    padding: 0.8rem 1.2rem;
+    background-color: var(--russian-red);
+    color: var(--light-text);
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.terms {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.terms a {
+    color: var(--gray-medium);
+    transition: color 0.3s ease;
+}
+
+.terms a:hover {
+    color: var(--russian-white);
+}
+
+.copyright {
+    color: var(--gray-medium);
+}
+
+/* Eastern European Decorative Elements */
+.featured-categories::before, 
+.featured-products::before {
+    content: '';
+    display: block;
+    height: 15px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--russian-red),
+        var(--russian-red) 10px,
+        var(--russian-blue) 10px,
+        var(--russian-blue) 20px
+    );
+    margin-bottom: 2rem;
+}
+
+/* Eastern European Ornamental Elements */
+.ornament-left,
+.ornament-right {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    opacity: 0.8;
+}
+
+.ornament-left {
+    margin-right: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E4382D'%3E%3Cpath d='M12 2L9 9H2L7 14L5 22L12 17L19 22L17 14L22 9H15L12 2Z'/%3E%3C/svg%3E");
+}
+
+.ornament-right {
+    margin-left: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230C3992'%3E%3Cpath d='M12 2L9 9H2L7 14L5 22L12 17L19 22L17 14L22 9H15L12 2Z'/%3E%3C/svg%3E");
+}
+
+/* Add traditional Russian pattern to specific elements */
+.footer-column h4::before {
+    content: '☭';
+    margin-right: 8px;
+    color: var(--russian-red);
+}
+
+.primary-btn, .secondary-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.primary-btn::after, .secondary-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.7s ease;
+}
+
+.primary-btn:hover::after, .secondary-btn:hover::after {
+    left: 100%;
+}
+
+/* Enhanced hover effects */
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(228, 56, 45, 0.2),
+        transparent,
+        rgba(12, 57, 146, 0.2)
+    );
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.category-card:hover::before {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .brand-story {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    nav {
+        display: none;
+    }
+    
+    .header-container {
+        justify-content: space-between;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .terms {
+        justify-content: center;
+    }
+} 

@@ -1,0 +1,153 @@
+.brandStory {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  gap: 3rem;
+  position: relative;
+}
+
+.brandStory::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-bg);
+  z-index: -1;
+}
+
+.storyContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.storyContent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 60%;
+  background-color: var(--russian-red);
+}
+
+.storyContent h2 {
+  margin-bottom: 2rem;
+  font-size: 3.2rem;
+  color: var(--light-text);
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.storyContent h2::after {
+  width: 80px;
+  height: 5px;
+  bottom: -1rem;
+}
+
+.storyContent p {
+  margin-bottom: 2.5rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--gray-light);
+}
+
+.secondaryBtn {
+  align-self: flex-start;
+  background-color: transparent;
+  color: var(--light-text);
+  border: 2px solid var(--russian-red);
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.secondaryBtn:hover {
+  background-color: var(--russian-red);
+  color: var(--light-text);
+  transform: translateY(-5px);
+}
+
+.secondaryBtn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+  );
+  transition: left 0.7s ease;
+}
+
+.secondaryBtn:hover::after {
+  left: 100%;
+}
+
+.storyImageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 8px 8px 0 rgba(155, 30, 30, 0.3);
+  transition: box-shadow 0.3s ease;
+  filter: grayscale(40%) contrast(110%);
+  min-height: 450px;
+}
+
+.storyImageContainer:hover {
+  box-shadow: 12px 12px 0 rgba(155, 30, 30, 0.5);
+  filter: grayscale(20%) contrast(110%);
+}
+
+@media (max-width: 992px) {
+  .brandStory {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .storyContent {
+    order: 2;
+    padding: 0;
+  }
+  
+  .storyContent::before {
+    width: 100%;
+    height: 5px;
+    top: -2rem;
+  }
+  
+  .storyImageContainer {
+    height: 450px;
+    order: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .brandStory {
+    padding: 5rem 1.5rem;
+  }
+  
+  .storyContent h2 {
+    font-size: 2.5rem;
+  }
+  
+  .storyImageContainer {
+    height: 350px;
+  }
+} 

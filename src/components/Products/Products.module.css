@@ -1,0 +1,114 @@
+.featuredProducts {
+  padding: 6rem 2rem;
+  background-color: var(--medium-dark);
+  position: relative;
+}
+
+.featuredProducts h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.2rem;
+  color: var(--light-text);
+}
+
+.featuredProducts h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 5px;
+}
+
+.featuredProducts::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background: var(--russian-red);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.productSlider {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.productCard {
+  background-color: var(--darker-bg);
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 2px solid var(--russian-red);
+  border-top: 2px solid var(--russian-red);
+}
+
+.productCard:hover {
+  transform: translateY(-8px) translateX(-5px);
+  box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+}
+
+.imageContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), transparent);
+  z-index: 1;
+}
+
+.productInfo {
+  padding: 1.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.productInfo h3 {
+  font-size: 1.3rem;
+  color: var(--light-text);
+  font-weight: 800;
+  letter-spacing: 0;
+  margin-bottom: 0.5rem;
+}
+
+.productInfo p {
+  color: var(--gray-light);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.price {
+  font-weight: 800;
+  color: var(--russian-red) !important;
+  margin-top: 1rem !important;
+  font-size: 1.2rem !important;
+  letter-spacing: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .featuredProducts {
+    padding: 5rem 1.5rem;
+  }
+  
+  .imageContainer {
+    height: 250px;
+  }
+  
+  .productInfo {
+    padding: 1.5rem;
+  }
+} 

@@ -4,7 +4,7 @@
   color: var(--text-light);
   position: relative;
   overflow: hidden;
-  padding: 4rem 0;
+  padding: 8rem 0 4rem 0;
 }
 
 .hero::before {
@@ -39,6 +39,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  padding-top: 2rem;
 }
 
 .heroLeft {
@@ -170,6 +171,7 @@
   .heroContainer {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding-top: 1rem;
   }
   
   .heroRight {
@@ -195,7 +197,7 @@
 
 @media (max-width: 576px) {
   .hero {
-    padding: 2rem 0;
+    padding: 6rem 0 2rem 0;
   }
   
   .heroContainer {

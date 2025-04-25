@@ -1,13 +1,10 @@
 .hero {
-  height: 90vh;
+  min-height: 90vh;
   background: var(--gradient-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: var(--text-light);
-  text-align: center;
   position: relative;
   overflow: hidden;
+  padding: 4rem 0;
 }
 
 .hero::before {
@@ -32,38 +29,45 @@
   z-index: 2;
 }
 
-.heroContent {
-  max-width: 900px;
-  padding: 2rem;
+.heroContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
   position: relative;
   z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
-.heroContent h1 {
+.heroLeft {
+  text-align: left;
+}
+
+.heroLeft h1 {
   margin-bottom: 1.5rem;
-  font-size: 5rem;
+  font-size: 4.5rem;
   background: linear-gradient(90deg, var(--text-light) 0%, rgba(255, 255, 255, 0.7) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   display: inline-block;
+  line-height: 1.1;
 }
 
-.heroContent h1 span {
+.heroLeft h1 span {
   background: var(--gradient-accent);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.heroContent p {
-  font-size: 1.6rem;
+.heroLeft p {
+  font-size: 1.4rem;
   margin-bottom: 2.5rem;
   font-weight: 300;
   opacity: 0.9;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .primaryBtn {
@@ -104,6 +108,10 @@
 
 .primaryBtn:hover::after {
   left: 100%;
+}
+
+.heroRight {
+  width: 100%;
 }
 
 .heroBackground {
@@ -149,22 +157,35 @@
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .heroContent h1 {
-    font-size: 4rem;
+  .heroLeft h1 {
+    font-size: 3.5rem;
   }
   
-  .heroContent p {
-    font-size: 1.4rem;
+  .heroLeft p {
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .heroContent h1 {
-    font-size: 3.5rem;
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
-  .heroContent p {
-    font-size: 1.2rem;
+  .heroRight {
+    order: -1; /* Video on top for mobile */
+  }
+  
+  .heroLeft {
+    text-align: center;
+  }
+  
+  .heroLeft h1 {
+    font-size: 3rem;
+  }
+  
+  .heroLeft p {
+    font-size: 1.1rem;
   }
   
   .primaryBtn {
@@ -173,15 +194,24 @@
 }
 
 @media (max-width: 576px) {
-  .heroContent h1 {
-    font-size: 2.8rem;
+  .hero {
+    padding: 2rem 0;
   }
   
-  .heroContent p {
+  .heroContainer {
+    padding: 0 1.5rem;
+  }
+  
+  .heroLeft h1 {
+    font-size: 2.5rem;
+  }
+  
+  .heroLeft p {
     font-size: 1rem;
   }
   
-  .heroContent {
-    padding: 1.5rem;
+  .primaryBtn {
+    padding: 0.9rem 2rem;
+    font-size: 0.9rem;
   }
 } 

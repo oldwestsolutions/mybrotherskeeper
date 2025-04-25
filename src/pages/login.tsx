@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { Header } from '../components/Header/Header';
-import { Footer } from '../components/Footer/Footer';
+import { LoginHeader } from '../components/LoginHeader/LoginHeader';
 import { useAuth } from '../contexts/AuthContext';
 import styles from './login.module.css';
 
@@ -36,7 +35,7 @@ const LoginPage: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <Header />
+      <LoginHeader />
       
       <main className={styles.main}>
         <div className={styles.loginContainer}>
@@ -116,8 +115,6 @@ const LoginPage: React.FC = () => {
           </div>
         </div>
       </main>
-      
-      <Footer />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { Header } from '@/components/Header/Header';
 import { ImmersiveHero } from '@/components/ImmersiveHero/ImmersiveHero';
-import { IoTHealthAds } from '@/components/IoTHealthAds/IoTHealthAds';
+import { FitnessPlatformSections } from '@/components/FitnessPlatformSections/FitnessPlatformSections';
 import { Footer } from '@/components/Footer/Footer';
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
       <Header />
       <main>
         <ImmersiveHero />
-        <IoTHealthAds />
+        <FitnessPlatformSections />
       </main>
       <Footer />
     </>

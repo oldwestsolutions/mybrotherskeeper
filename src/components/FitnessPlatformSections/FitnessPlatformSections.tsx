@@ -1,17 +1,31 @@
 'use client';
 
 import React from 'react';
+import { useFadeInOnScroll } from '@/utils/animation';
 
 export const FitnessPlatformSections: React.FC = () => {
+  const { ref: section1Ref, inView: section1InView } = useFadeInOnScroll(0.2);
+  const { ref: section2Ref, inView: section2InView } = useFadeInOnScroll(0.2);
+  const { ref: section3Ref, inView: section3InView } = useFadeInOnScroll(0.2);
+  const { ref: section4Ref, inView: section4InView } = useFadeInOnScroll(0.2);
+  const { ref: section5Ref, inView: section5InView } = useFadeInOnScroll(0.2);
+
   return (
     <>
       {/* Section 1: 3D Workout Experience */}
-      <section className="d-flex align-items-center justify-content-center" style={{ 
-        minHeight: '100vh',
-        background: 'linear-gradient(135deg, #050505 0%, #000000 50%, #0F3520 100%)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
+      <section 
+        ref={section1Ref}
+        className="d-flex align-items-center justify-content-center" 
+        style={{ 
+          minHeight: '100vh',
+          background: 'linear-gradient(135deg, #050505 0%, #000000 50%, #0F3520 100%)',
+          position: 'relative',
+          overflow: 'hidden',
+          opacity: section1InView ? 1 : 0,
+          transform: section1InView ? 'translateY(0)' : 'translateY(50px)',
+          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
+        }}
+      >
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-5 mb-lg-0">
@@ -93,12 +107,19 @@ export const FitnessPlatformSections: React.FC = () => {
       </section>
 
       {/* Section 2: Snapchat Integration */}
-      <section className="d-flex align-items-center justify-content-center" style={{ 
-        minHeight: '100vh',
-        background: 'linear-gradient(135deg, #000000 0%, #050505 50%, #0F3520 100%)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
+      <section 
+        ref={section2Ref}
+        className="d-flex align-items-center justify-content-center" 
+        style={{ 
+          minHeight: '100vh',
+          background: 'linear-gradient(135deg, #000000 0%, #050505 50%, #0F3520 100%)',
+          position: 'relative',
+          overflow: 'hidden',
+          opacity: section2InView ? 1 : 0,
+          transform: section2InView ? 'translateY(0)' : 'translateY(50px)',
+          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
+        }}
+      >
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 order-lg-2 mb-5 mb-lg-0">
@@ -216,12 +237,19 @@ export const FitnessPlatformSections: React.FC = () => {
       </section>
 
       {/* Section 3: IoT Health Device Sync */}
-      <section className="d-flex align-items-center justify-content-center" style={{ 
-        minHeight: '100vh',
-        background: 'linear-gradient(135deg, #0F3520 0%, #000000 50%, #050505 100%)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
+      <section 
+        ref={section3Ref}
+        className="d-flex align-items-center justify-content-center" 
+        style={{ 
+          minHeight: '100vh',
+          background: 'linear-gradient(135deg, #0F3520 0%, #000000 50%, #050505 100%)',
+          position: 'relative',
+          overflow: 'hidden',
+          opacity: section3InView ? 1 : 0,
+          transform: section3InView ? 'translateY(0)' : 'translateY(50px)',
+          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
+        }}
+      >
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-5 mb-lg-0">
@@ -333,12 +361,19 @@ export const FitnessPlatformSections: React.FC = () => {
       </section>
 
       {/* Section 4: Personalized Training Plans */}
-      <section className="d-flex align-items-center justify-content-center" style={{ 
-        minHeight: '100vh',
-        background: 'linear-gradient(135deg, #050505 0%, #0F3520 50%, #000000 100%)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
+      <section 
+        ref={section4Ref}
+        className="d-flex align-items-center justify-content-center" 
+        style={{ 
+          minHeight: '100vh',
+          background: 'linear-gradient(135deg, #050505 0%, #0F3520 50%, #000000 100%)',
+          position: 'relative',
+          overflow: 'hidden',
+          opacity: section4InView ? 1 : 0,
+          transform: section4InView ? 'translateY(0)' : 'translateY(50px)',
+          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
+        }}
+      >
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 order-lg-2 mb-5 mb-lg-0">
@@ -446,12 +481,19 @@ export const FitnessPlatformSections: React.FC = () => {
       </section>
 
       {/* Section 5: Community & Social Features */}
-      <section className="d-flex align-items-center justify-content-center" style={{ 
-        minHeight: '100vh',
-        background: 'linear-gradient(135deg, #000000 0%, #050505 50%, #0F3520 100%)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
+      <section 
+        ref={section5Ref}
+        className="d-flex align-items-center justify-content-center" 
+        style={{ 
+          minHeight: '100vh',
+          background: 'linear-gradient(135deg, #000000 0%, #050505 50%, #0F3520 100%)',
+          position: 'relative',
+          overflow: 'hidden',
+          opacity: section5InView ? 1 : 0,
+          transform: section5InView ? 'translateY(0)' : 'translateY(50px)',
+          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
+        }}
+      >
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-5 mb-lg-0">

@@ -41,7 +41,7 @@
 
 .footerColumn h4 {
   margin-bottom: 1.8rem;
-  color: var(--russian-white);
+  color: #FFFFFF;
   position: relative;
   font-size: 1.3rem;
   letter-spacing: 1px;
@@ -58,7 +58,7 @@
 }
 
 .footerColumn ul li a {
-  color: var(--gray-medium);
+  color: #FFFFFF;
   transition: color 0.3s ease, transform 0.3s ease;
   display: inline-block;
   font-weight: 400;
@@ -67,7 +67,7 @@
 }
 
 .footerColumn ul li a:hover {
-  color: var(--russian-white);
+  color: rgba(255, 255, 255, 0.8);
   padding-left: 6px;
 }
 
@@ -96,7 +96,7 @@
 
 .newsletter p {
   margin-bottom: 1.2rem;
-  color: var(--gray-light);
+  color: #FFFFFF;
   font-size: 0.95rem;
 }
 
@@ -151,18 +151,18 @@
 }
 
 .terms a {
-  color: var(--gray-medium);
+  color: #FFFFFF;
   transition: color 0.3s ease;
   font-size: 0.9rem;
   font-weight: 300;
 }
 
 .terms a:hover {
-  color: var(--russian-white);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .copyright {
-  color: var(--gray-medium);
+  color: #FFFFFF;
   font-size: 0.9rem;
   font-weight: 300;
 }

@@ -17,7 +17,7 @@ const products: ProductData[] = [
   {
     id: 'concrete-runner',
     name: 'Concrete Runner',
-    type: 'Men\'s Brutalist Shoe',
+    type: 'Men\'s Fitness Shoe',
     price: '$135',
     imageUrl: 'https://via.placeholder.com/300x300/151515/333333',
     link: '/products/concrete-runner',

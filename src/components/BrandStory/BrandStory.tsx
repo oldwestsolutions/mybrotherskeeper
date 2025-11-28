@@ -15,9 +15,9 @@ export const BrandStory: React.FC = () => {
       <div className={styles.storyContent}>
         <h2>THE DARK COLLECTIVE</h2>
         <p>
-          Forged in the shadow of Soviet brutalist architecture, MBK represents 
-          strength through unity and uncompromising design. Our footwear embraces 
-          the raw power of concrete, steel, and the unyielding spirit of Eastern Europe.
+          Built for modern fitness enthusiasts, MBK represents 
+          strength through unity and uncompromising design. Our platform embraces 
+          innovation, technology, and the unyielding spirit of achievement.
         </p>
         <Link href="/about">
           <button className={styles.secondaryBtn}>Explore Legacy</button>
@@ -26,7 +26,7 @@ export const BrandStory: React.FC = () => {
       <div className={styles.storyImageContainer}>
         <Image
           src="https://via.placeholder.com/600x400/151515/333333"
-          alt="Brutalist Architecture"
+          alt="Modern Fitness"
           fill
           style={{ objectFit: 'cover' }}
           sizes="(max-width: 992px) 100vw, 50vw"

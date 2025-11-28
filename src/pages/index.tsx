@@ -19,8 +19,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>My Brothers Keeper - Modern 3D Fitness Experience</title>
-        <meta name="description" content="My Brothers Keeper - Transform your fitness journey with immersive 3D workouts, Snapchat integration, and IoT health device connectivity" />
+        <title>Modern Fitness - My Brothers Keeper</title>
+        <meta name="description" content="Modern Fitness - Transform your fitness journey with immersive 3D workouts, Snapchat integration, and IoT health device connectivity" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#000000" />

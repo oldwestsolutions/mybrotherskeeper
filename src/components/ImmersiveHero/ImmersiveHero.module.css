@@ -22,10 +22,10 @@
   width: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 2rem;
-  padding-top: 6rem;
+  padding-top: 2rem;
   padding-bottom: 4rem;
 }
 
@@ -308,13 +308,17 @@
 @media (max-width: 768px) {
   .heroContent {
     padding: 1.5rem;
-    padding-top: 5rem;
+    padding-top: 1.5rem;
     padding-bottom: 3rem;
     min-height: auto;
   }
   
   .contentWrapper {
     gap: 2rem;
+  }
+  
+  .sideContent {
+    display: none;
   }
   
   .heroTitle {
@@ -368,11 +372,6 @@
     font-size: 0.9rem;
   }
   
-  .fitnessImage {
-    max-height: 400px;
-    margin-top: 2rem;
-  }
-  
   .scrollIndicator {
     bottom: 1.5rem;
     font-size: 0.8rem;
@@ -382,7 +381,7 @@
 @media (max-width: 576px) {
   .heroContent {
     padding: 1rem;
-    padding-top: 4rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
   }
   
@@ -408,10 +407,6 @@
   
   .snapchatDescription {
     font-size: 0.85rem;
-  }
-  
-  .fitnessImage {
-    max-height: 300px;
   }
 }
 

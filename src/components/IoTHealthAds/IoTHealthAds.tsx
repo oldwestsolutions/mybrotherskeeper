@@ -62,7 +62,7 @@ export const IoTHealthAds: React.FC = () => {
 
   const checkForIoTDevices = async () => {
     // Check for Web Bluetooth API
-    if (navigator.bluetooth) {
+    if ('bluetooth' in navigator) {
       try {
         // In production, this would scan for and connect to devices
         console.log('Bluetooth API available');
@@ -72,7 +72,7 @@ export const IoTHealthAds: React.FC = () => {
     }
 
     // Check for Web USB API
-    if (navigator.usb) {
+    if ('usb' in navigator) {
       try {
         console.log('Web USB API available');
       } catch (error) {

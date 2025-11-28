@@ -18,7 +18,7 @@ export const FitnessPlatformSections: React.FC = () => {
         className="d-flex align-items-center justify-content-center" 
         style={{ 
           minHeight: '100vh',
-          background: 'linear-gradient(135deg, #050505 0%, #000000 50%, #0F3520 100%)',
+          background: '#000000',
           position: 'relative',
           overflow: 'hidden',
           opacity: section1InView ? 1 : 0,
@@ -112,7 +112,7 @@ export const FitnessPlatformSections: React.FC = () => {
         className="d-flex align-items-center justify-content-center" 
         style={{ 
           minHeight: '100vh',
-          background: 'linear-gradient(135deg, #000000 0%, #050505 50%, #0F3520 100%)',
+          background: '#050505',
           position: 'relative',
           overflow: 'hidden',
           opacity: section2InView ? 1 : 0,
@@ -242,7 +242,7 @@ export const FitnessPlatformSections: React.FC = () => {
         className="d-flex align-items-center justify-content-center" 
         style={{ 
           minHeight: '100vh',
-          background: 'linear-gradient(135deg, #0F3520 0%, #000000 50%, #050505 100%)',
+          background: '#0A0A0A',
           position: 'relative',
           overflow: 'hidden',
           opacity: section3InView ? 1 : 0,
@@ -366,7 +366,7 @@ export const FitnessPlatformSections: React.FC = () => {
         className="d-flex align-items-center justify-content-center" 
         style={{ 
           minHeight: '100vh',
-          background: 'linear-gradient(135deg, #050505 0%, #0F3520 50%, #000000 100%)',
+          background: '#000000',
           position: 'relative',
           overflow: 'hidden',
           opacity: section4InView ? 1 : 0,
@@ -486,7 +486,7 @@ export const FitnessPlatformSections: React.FC = () => {
         className="d-flex align-items-center justify-content-center" 
         style={{ 
           minHeight: '100vh',
-          background: 'linear-gradient(135deg, #000000 0%, #050505 50%, #0F3520 100%)',
+          background: '#050505',
           position: 'relative',
           overflow: 'hidden',
           opacity: section5InView ? 1 : 0,

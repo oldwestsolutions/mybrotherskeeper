@@ -5,6 +5,7 @@ import type { AppProps } from 'next/app';
 import { Roboto } from 'next/font/google';
 import Head from 'next/head';
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { AuthProvider } from '../contexts/AuthContext';
 
 const roboto = Roboto({
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <AuthProvider>
         <div className={roboto.className}>
           <Component {...pageProps} />
+          <Analytics />
         </div>
       </AuthProvider>
     </>

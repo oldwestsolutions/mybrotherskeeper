@@ -30,6 +30,34 @@ export const ImmersiveHero: React.FC = () => {
                 Explore Features
               </button>
             </div>
+            
+            <div className={styles.snapchatSection}>
+              <div className={styles.snapchatContent}>
+                <h3 className={styles.snapchatTitle}>Connect with Snapchat</h3>
+                <p className={styles.snapchatDescription}>
+                  Share your fitness achievements, workout progress, and milestones with your Snapchat community. 
+                  Our seamless integration lets you document your journey, celebrate victories, and inspire others 
+                  with real-time workout shares and achievement highlights.
+                </p>
+                <div className={styles.snapchatFeatures}>
+                  <div className={styles.snapchatFeature}>
+                    <i className="bi bi-lightning-charge-fill"></i>
+                    <span>Instant Sharing</span>
+                  </div>
+                  <div className={styles.snapchatFeature}>
+                    <i className="bi bi-camera-reels-fill"></i>
+                    <span>Rich Media</span>
+                  </div>
+                  <div className={styles.snapchatFeature}>
+                    <i className="bi bi-shield-lock-fill"></i>
+                    <span>Privacy Controls</span>
+                  </div>
+                </div>
+                <button className={styles.snapchatButton}>
+                  Connect Snapchat
+                </button>
+              </div>
+            </div>
           </div>
           
           <div className={styles.sideContent}>

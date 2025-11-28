@@ -100,52 +100,55 @@ export const IoTHealthAds: React.FC = () => {
 
   if (!hasEligibleDevice) {
     return (
-      <div className={styles.container}>
-        <div className={styles.noDeviceCard}>
-          <div className={styles.icon}>⌚</div>
-          <h3>Connect Your Health Device</h3>
-          <p>Link your fitness tracker or smartwatch to unlock exclusive offers and personalized content</p>
-          <button className={styles.connectButton} onClick={checkForIoTDevices}>
-            Connect Device
-          </button>
+      <div className="py-5" style={{ background: 'linear-gradient(135deg, #050505 0%, #000000 50%, #0F3520 100%)' }}>
+        <div className="container">
+          <div className="card mx-auto" style={{ maxWidth: '500px', background: 'rgba(26, 26, 26, 0.8)', border: '1px solid rgba(15, 53, 32, 0.3)' }}>
+            <div className="card-body text-center p-5">
+              <i className="bi bi-smartwatch text-success" style={{ fontSize: '4rem' }}></i>
+              <h3 className="text-white fw-bold mt-3 mb-3">Connect Your Health Device</h3>
+              <p className="text-white-50 mb-4">Link your fitness tracker or smartwatch to unlock exclusive offers and personalized content</p>
+              <button className="btn btn-success px-4 py-2 fw-bold" onClick={checkForIoTDevices}>
+                Connect Device
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <h2>Exclusive Offers for Your Device</h2>
-        <p>Special discounts for eligible IoT health device users</p>
-      </div>
-      <div className={styles.devicesGrid}>
-        {devices
-          .filter(device => device.eligible)
-          .map((device) => (
-            <div key={device.id} className={styles.deviceCard}>
-              <div className={styles.discountBadge}>{device.discount}% OFF</div>
-              <div className={styles.deviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  {device.type === 'fitness_tracker' && '⌚'}
-                  {device.type === 'smart_watch' && '⌚'}
-                  {device.type === 'smart_scale' && '⚖️'}
-                  {device.type === 'heart_rate_monitor' && '❤️'}
+    <div className="py-5" style={{ background: 'linear-gradient(135deg, #050505 0%, #000000 50%, #0F3520 100%)' }}>
+      <div className="container">
+        <div className="text-center mb-5">
+          <h2 className="text-white fw-bold mb-3">Exclusive Offers for Your Device</h2>
+          <p className="text-white-50">Special discounts for eligible IoT health device users</p>
+        </div>
+        <div className="row g-4">
+          {devices
+            .filter(device => device.eligible)
+            .map((device) => (
+              <div key={device.id} className="col-md-4">
+                <div className="card h-100 position-relative" style={{ background: 'rgba(26, 26, 26, 0.8)', border: '1px solid rgba(15, 53, 32, 0.3)' }}>
+                  <span className="badge bg-success position-absolute top-0 end-0 m-3">{device.discount}% OFF</span>
+                  <div className="card-body text-center p-4">
+                    <div className="mb-3" style={{ height: '200px', background: 'rgba(15, 53, 32, 0.2)', borderRadius: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <i className={`bi ${device.type === 'fitness_tracker' || device.type === 'smart_watch' ? 'bi-smartwatch' : device.type === 'smart_scale' ? 'bi-speedometer' : 'bi-heart-pulse'} text-success`} style={{ fontSize: '5rem', opacity: 0.6 }}></i>
+                    </div>
+                    <h3 className="text-white fw-bold mb-2">{device.name}</h3>
+                    <p className="text-white-50 text-uppercase small mb-2">{device.brand}</p>
+                    <p className="text-white-50 mb-4">{device.description}</p>
+                    <button
+                      className="btn btn-success w-100 fw-bold"
+                      onClick={() => handleShareAd(device)}
+                    >
+                      Share Offer
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div className={styles.deviceInfo}>
-                <h3>{device.name}</h3>
-                <p className={styles.brand}>{device.brand}</p>
-                <p className={styles.description}>{device.description}</p>
-                <button
-                  className={styles.shareAdButton}
-                  onClick={() => handleShareAd(device)}
-                >
-                  Share Offer
-                </button>
-              </div>
-            </div>
-          ))}
+            ))}
+        </div>
       </div>
     </div>
   );

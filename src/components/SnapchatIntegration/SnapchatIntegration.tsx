@@ -82,7 +82,7 @@ export const SnapchatIntegration: React.FC = () => {
             className={styles.snapchatButton}
             onClick={handleSnapchatLogin}
           >
-            <span className={styles.snapchatButtonIcon}>👻</span>
+            <i className="bi bi-share-fill me-2"></i>
             Connect Snapchat
           </button>
         ) : (

@@ -23,13 +23,14 @@ export const FitnessPlatformSections: React.FC = () => {
           overflow: 'hidden',
           opacity: section1InView ? 1 : 0,
           transform: section1InView ? 'translateY(0)' : 'translateY(50px)',
-          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
+          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out',
+          padding: '2rem 0'
         }}
       >
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-5 mb-lg-0">
-              <div className="position-relative" style={{ height: '500px', borderRadius: '20px', overflow: 'hidden' }}>
+              <div className="position-relative" style={{ height: 'clamp(300px, 50vh, 500px)', borderRadius: '20px', overflow: 'hidden' }}>
                 <img 
                   src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop" 
                   alt="3D Workout Experience"
@@ -45,10 +46,10 @@ export const FitnessPlatformSections: React.FC = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <h1 className="text-white fw-bold mb-4" style={{ fontSize: '4rem', lineHeight: '1.1' }}>
-                Immersive 3D<br />Workout Experience
+              <h1 className="text-white fw-bold mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', lineHeight: '1.1' }}>
+                Immersive 3D<br className="d-none d-md-block" />Workout Experience
               </h1>
-              <p className="text-white-50 mb-4" style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
+              <p className="text-white-50 mb-4" style={{ fontSize: 'clamp(0.95rem, 2vw, 1.2rem)', lineHeight: '1.8' }}>
                 Step into the future of fitness with our revolutionary 3D workout platform. Experience real-time motion capture, 
                 interactive virtual environments, and AI-powered form analysis that transforms how you train.
               </p>
@@ -117,7 +118,8 @@ export const FitnessPlatformSections: React.FC = () => {
           overflow: 'hidden',
           opacity: section2InView ? 1 : 0,
           transform: section2InView ? 'translateY(0)' : 'translateY(50px)',
-          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
+          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out',
+          padding: '2rem 0'
         }}
       >
         <div className="container">
@@ -175,10 +177,10 @@ export const FitnessPlatformSections: React.FC = () => {
               </div>
             </div>
             <div className="col-lg-6 order-lg-1">
-              <h1 className="text-white fw-bold mb-4" style={{ fontSize: '4rem', lineHeight: '1.1' }}>
-                Share Your<br />Fitness Journey
+              <h1 className="text-white fw-bold mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', lineHeight: '1.1' }}>
+                Share Your<br className="d-none d-md-block" />Fitness Journey
               </h1>
-              <p className="text-white-50 mb-4" style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
+              <p className="text-white-50 mb-4" style={{ fontSize: 'clamp(0.95rem, 2vw, 1.2rem)', lineHeight: '1.8' }}>
                 Connect your fitness journey with Snapchat integration. Document your progress, celebrate milestones, 
                 and inspire your community with real-time workout shares and achievement highlights.
               </p>
@@ -247,7 +249,8 @@ export const FitnessPlatformSections: React.FC = () => {
           overflow: 'hidden',
           opacity: section3InView ? 1 : 0,
           transform: section3InView ? 'translateY(0)' : 'translateY(50px)',
-          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
+          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out',
+          padding: '2rem 0'
         }}
       >
         <div className="container">
@@ -299,10 +302,10 @@ export const FitnessPlatformSections: React.FC = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <h1 className="text-white fw-bold mb-4" style={{ fontSize: '4rem', lineHeight: '1.1' }}>
-                Unified Health<br />Device Ecosystem
+              <h1 className="text-white fw-bold mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', lineHeight: '1.1' }}>
+                Unified Health<br className="d-none d-md-block" />Device Ecosystem
               </h1>
-              <p className="text-white-50 mb-4" style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
+              <p className="text-white-50 mb-4" style={{ fontSize: 'clamp(0.95rem, 2vw, 1.2rem)', lineHeight: '1.8' }}>
                 Seamlessly integrate all your health and fitness devices into one comprehensive platform. 
                 From smartwatches to fitness trackers, get real-time insights and unified analytics across all your devices.
               </p>
@@ -371,7 +374,8 @@ export const FitnessPlatformSections: React.FC = () => {
           overflow: 'hidden',
           opacity: section4InView ? 1 : 0,
           transform: section4InView ? 'translateY(0)' : 'translateY(50px)',
-          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
+          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out',
+          padding: '2rem 0'
         }}
       >
         <div className="container">
@@ -419,10 +423,10 @@ export const FitnessPlatformSections: React.FC = () => {
               </div>
             </div>
             <div className="col-lg-6 order-lg-1">
-              <h1 className="text-white fw-bold mb-4" style={{ fontSize: '4rem', lineHeight: '1.1' }}>
-                AI-Powered<br />Training Plans
+              <h1 className="text-white fw-bold mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', lineHeight: '1.1' }}>
+                AI-Powered<br className="d-none d-md-block" />Training Plans
               </h1>
-              <p className="text-white-50 mb-4" style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
+              <p className="text-white-50 mb-4" style={{ fontSize: 'clamp(0.95rem, 2vw, 1.2rem)', lineHeight: '1.8' }}>
                 Get personalized workout programs designed by AI to match your fitness level, goals, and preferences. 
                 Our intelligent system adapts in real-time based on your progress and performance.
               </p>
@@ -491,7 +495,8 @@ export const FitnessPlatformSections: React.FC = () => {
           overflow: 'hidden',
           opacity: section5InView ? 1 : 0,
           transform: section5InView ? 'translateY(0)' : 'translateY(50px)',
-          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
+          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out',
+          padding: '2rem 0'
         }}
       >
         <div className="container">
@@ -549,10 +554,10 @@ export const FitnessPlatformSections: React.FC = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <h1 className="text-white fw-bold mb-4" style={{ fontSize: '4rem', lineHeight: '1.1' }}>
-                Join a Thriving<br />Fitness Community
+              <h1 className="text-white fw-bold mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', lineHeight: '1.1' }}>
+                Join a Thriving<br className="d-none d-md-block" />Fitness Community
               </h1>
-              <p className="text-white-50 mb-4" style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
+              <p className="text-white-50 mb-4" style={{ fontSize: 'clamp(0.95rem, 2vw, 1.2rem)', lineHeight: '1.8' }}>
                 Connect with thousands of fitness enthusiasts. Participate in challenges, share your journey, 
                 and get motivated by a supportive community that celebrates every milestone together.
               </p>

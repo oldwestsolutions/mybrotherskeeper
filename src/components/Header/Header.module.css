@@ -27,10 +27,17 @@
   position: relative;
   transition: transform 0.3s ease;
   white-space: nowrap;
+  text-decoration: none;
+  border: none;
 }
 
 .logo a:hover {
   transform: scale(1.03);
+}
+
+.logo a::after,
+.logo a::before {
+  display: none !important;
 }
 
 

@@ -129,6 +129,42 @@
   justify-content: center;
 }
 
+.fitnessImage {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.contextualImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  padding: 2rem;
+}
+
+.imageBadge {
+  background: #0F3520;
+  color: #FFFFFF;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(15, 53, 32, 0.5);
+}
+
 .scrollIndicator {
   position: absolute;
   bottom: 3rem;

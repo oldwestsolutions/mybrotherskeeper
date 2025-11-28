@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Fitness3D } from '../Fitness3D/Fitness3D';
-import { SnapchatIntegration } from '../SnapchatIntegration/SnapchatIntegration';
 import styles from './ImmersiveHero.module.css';
 
 export const ImmersiveHero: React.FC = () => {
@@ -34,7 +33,16 @@ export const ImmersiveHero: React.FC = () => {
           </div>
           
           <div className={styles.sideContent}>
-            <SnapchatIntegration />
+            <div className={styles.fitnessImage}>
+              <img 
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop" 
+                alt="Fitness Training"
+                className={styles.contextualImage}
+              />
+              <div className={styles.imageOverlay}>
+                <div className={styles.imageBadge}>PREMIUM TRAINING</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

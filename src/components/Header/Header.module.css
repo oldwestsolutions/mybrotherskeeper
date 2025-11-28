@@ -18,14 +18,15 @@
 }
 
 .logo a {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 900;
   color: #FFFFFF;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   padding: 0.5rem 0;
   display: inline-block;
   position: relative;
   transition: transform 0.3s ease;
+  white-space: nowrap;
 }
 
 .logo a:hover {
@@ -181,6 +182,6 @@
   }
   
   .logo a {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
   }
 } 

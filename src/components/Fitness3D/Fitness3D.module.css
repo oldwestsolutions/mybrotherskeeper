@@ -1,0 +1,13 @@
+.fitness3DContainer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(135deg, #050505 0%, #000000 50%, #0F3520 100%);
+  overflow: hidden;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+}
+

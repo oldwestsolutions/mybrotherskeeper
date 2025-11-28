@@ -21,30 +21,8 @@ export const Header: React.FC = () => {
       <header className={styles.header}>
         <div className={styles.headerContainer}>
           <div className={styles.logo}>
-            <Link href="/">MBK</Link>
+            <Link href="/">My Brothers Keeper</Link>
           </div>
-          <nav className={styles.nav}>
-            <ul>
-              <li>
-                <Link href="/shoes">Shoes</Link>
-              </li>
-              <li>
-                <Link href="/clothing">Clothing</Link>
-              </li>
-              <li>
-                <Link href="/men">Men</Link>
-              </li>
-              <li>
-                <Link href="/women">Women</Link>
-              </li>
-              <li>
-                <Link href="/kids">Kids</Link>
-              </li>
-              <li>
-                <Link href="/collections">Collections</Link>
-              </li>
-            </ul>
-          </nav>
           <div className={styles.headerActions}>
             <div className={styles.search} onClick={openSearchModal}>
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
